@@ -1,0 +1,157 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(15, 23, 42, 0.6); /* dark slate with transparency */
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #9333ea);
+  transition: width 0.4s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.hire-btn {
+  background: linear-gradient(to right, #60a5fa, #9333ea);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.8);
+}
+
+.menu-icon {
+  display: none;
+  color: #f1f5f9;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    background: rgba(15, 23, 42, 0.95);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+    padding: 16px 0;
+  }
+
+  .hire-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Glowing background shapes behind navbar */
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.navbar::before {
+  top: -60px;
+  left: -40px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.5), transparent);
+}
+
+.navbar::after {
+  top: -40px;
+  right: -40px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.4), transparent);
+}
+/* Shrinking effect on scroll */
+.navbar {
+  transition: all 0.4s ease;
+  padding: 18px 0;
+}
+
+.navbar-scrolled {
+  padding: 8px 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-scrolled .nav-logo {
+  font-size: 1.4rem;
+  text-shadow: 0 0 6px rgba(147, 51, 234, 0.4);
+}
+
+.navbar-scrolled .hire-btn {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}

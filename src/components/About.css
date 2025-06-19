@@ -1,0 +1,80 @@
+.about-section {
+  position: relative;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #111;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+/* Center content */
+.about-container {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* Resume button */
+.resume-btn {
+  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid #0072ff;
+  color: #0072ff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: #0072ff;
+  color: white;
+}
+
+/* Glowing blobs */
+.about-section::before,
+.about-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  animation: blobMove 18s infinite ease-in-out alternate;
+  z-index: 0;
+}
+
+.about-section::before {
+  width: 180px;
+  height: 180px;
+  background: #ff6ec7;
+  top: -10%;
+  left: -10%;
+}
+
+.about-section::after {
+  width: 280px;
+  height: 280px;
+  background: #00bfff;
+  bottom: -15%;
+  right: -10%;
+}
+
+@keyframes blobMove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(40px, 60px);
+  }
+}

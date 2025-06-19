@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+:root {
+  --melon: #fec5bb;
+  --pale-dogwood: #fcd5ce;
+  --misty-rose: #fae1dd;
+  --seashell: #f8edeb;
+  --platinum: #e8e8e4;
+  --platinum-2: #d8e2dc;
+  --linen: #ece4db;
+  --champagne-pink: #ffe5d9;
+  --apricot: #ffd7ba;
+  --peach: #fec89a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 2. GLOBAL RESET + SMOOTH FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 3. BODY BACKGROUND (Optional) */
+body {
+  background: var(--linen);
+  color: #222;
+  line-height: 1.6;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+a {
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  padding: 10px 20px;
+  background: #0084ff;
+  color: white;
+  border-radius: 5px;
 }
