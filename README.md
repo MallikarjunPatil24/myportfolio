@@ -8,7 +8,7 @@ Welcome to my personal **developer portfolio** website built with **React.js**! 
 
 ### 🌐 Live Demo
 
-🚀 [Visit Portfolio](https://mallikarjunportfolio.netlify.app)
+🚀 [Visit Portfolio](https://mallikarjunsportfolio.netlify.app)
 
 ---
 
